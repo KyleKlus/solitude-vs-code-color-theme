@@ -1,0 +1,38 @@
+{
+  "name": "solitude",
+  "displayName": "Solitude",
+  "description": "This is a color theme for vs code.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Solitude Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/solitude-dark-color-theme.json"
+      }
+    ]
+  }
+  ,"scripts": {
+    "start": "nodemon --watch src src/index.js",
+    "build": "node src/index.js && mkdir -p build",
+    "package": "vsce package -o ./build/github-vscode-theme.vsix",
+    "prepublishOnly": "npm run build && vsce publish",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.1",
+    "@changesets/cli": "^2.17.0",
+    "@primer/primitives": "7.10.0",
+    "chroma-js": "^2.1.2",
+    "color": "^3.1.2",
+    "nodemon": "^2.0.3",
+    "vsce": "^1.100.1"
+  }
+
+}
