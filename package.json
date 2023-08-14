@@ -12,9 +12,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Solitude Dark",
+        "label": "Solitude Red Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/solitude-dark-color-theme.json"
+        "path": "./themes/solitude-red-dark-color-theme.json"
+      },
+      {
+        "label": "Solitude Red Darker",
+        "uiTheme": "vs-dark",
+        "path": "./themes/solitude-red-darker-color-theme.json"
       }
     ]
   }
