@@ -82,7 +82,7 @@ function getTheme({ theme, name }) {
 			"dropdown.border": color.border.dark,
 			// Debug
 			"debugToolBar.border": color.border.dark,
-			"debugToolBar.background": color.grey.base,
+			"debugToolBar.background": color.surface.base,
 			"debugExceptionWidget.border": color.border.dark,
 			// Diff editor
 			"diffEditor.border": color.border.dark,
@@ -94,22 +94,19 @@ function getTheme({ theme, name }) {
 			"editorGroupHeader.tabsBackground": color.surface.dark,
 			// Editor
 			"editor.background": color.surface.darker,
-			"editor.findMatchBackground": alpha(
-				color.lightBlue.base,
-				0.05
-			),
-			"editor.findMatchBorder": alpha(
-				color.lightBlue.base,
-				0.35
-			),
+			"editor.findMatchBackground": alpha(color.lightBlue.base, 0.05),
+			"editor.findMatchBorder": alpha(color.lightBlue.base, 0.35),
 			"editor.findMatchHighlightBackground": alpha(
 				color.lightBlue.base,
 				0.3
 			),
 			"editor.findMatchHighlightBorder": color.transparent,
 			"editor.foreground": color.text.normal,
-			"editor.lineHighlightBackground": darken(color.surface.darker,0.08),
-			"editor.selectionBackground": alpha(color.lightBlue.base, 0.10),
+			"editor.lineHighlightBackground": darken(
+				color.surface.darker,
+				0.08
+			),
+			"editor.selectionBackground": alpha(color.lightBlue.base, 0.1),
 			"editor.selectionHighlightBackground": alpha(
 				color.lightBlue.base,
 				0.25
@@ -317,7 +314,7 @@ function getTheme({ theme, name }) {
 			"tab.inactiveForeground": color.grey.base,
 			"tab.activeBorderTop": color.accent.base,
 			"tab.lastPinnedBorder": color.border.dark,
-			"tab.hoverBorder": alpha(color.accent.base,0.3),
+			"tab.hoverBorder": alpha(color.accent.base, 0.3),
 			"tab.unfocusedActiveBorder": color.surface.dark,
 			"tab.unfocusedActiveBackground": color.transparent,
 			"tab.unfocusedActiveForeground": color.text.normal,

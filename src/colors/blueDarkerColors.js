@@ -249,8 +249,8 @@ const darkerColors = {
 
 	text: {
 		normal: darkerBaseScaleColors.white.base,
-		muted: chroma(darkerBaseScaleColors.grey.base).darken(0.3).hex(),
-		disabled: chroma(darkerBaseScaleColors.grey.base).darken(0.6).hex(),
+		muted: chroma(darkerBaseScaleColors.grey.scale[1]).hex(),
+		disabled: chroma(darkerBaseScaleColors.grey.base).darken(0.1).hex(),
 	},
 	surface: {
 		darker: darkerBaseScaleColors.black.scale[1],
@@ -284,7 +284,5 @@ const darkerColors = {
 	lightCyan: darkerBaseScaleColors.lightCyan,
 	transparent: darkerBaseColors.transparent,
 };
-
-
 
 module.exports = darkerColors;

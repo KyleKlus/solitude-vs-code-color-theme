@@ -249,8 +249,8 @@ const darkColors = {
 
 	text: {
 		normal: darkBaseScaleColors.white.base,
-		muted: chroma(darkBaseScaleColors.grey.base).darken(0.3).hex(),
-		disabled: chroma(darkBaseScaleColors.grey.base).darken(0.6).hex(),
+		muted: chroma(darkBaseScaleColors.grey.scale[1]).hex(),
+		disabled: chroma(darkBaseScaleColors.grey.base).darken(0.1).hex(),
 	},
 	surface: {
 		darker: darkBaseScaleColors.black.scale[1],
