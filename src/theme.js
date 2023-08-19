@@ -71,48 +71,67 @@ function getTheme({ theme, name }) {
 			// Checkbox
 			"checkbox.border": color.border.dark,
 			"checkbox.selectBorder": color.accent.base,
+			// Command center
 			"commandCenter.border": color.border.dark,
-			"dropdown.border": color.border.dark,
-			"debugToolBar.border": color.border.dark,
-			"debugExceptionWidget.border": color.border.dark,
-			"diffEditor.border": color.border.dark,
-			"editorGroupHeader.tabsBorder": color.border.dark,
-			"editorGroup.focusedEmptyBorder": color.border.dark,
-			"editorGroup.dropIntoPromptBorder": color.border.dark,
+			// Contrast Border
 			// contrastActiveBorder: "#be13d5",
 			contrastBorder: color.border.dark,
-			"debugToolBar.background": color.grey.base,
+			// Dropdown
+			"dropdown.border": color.border.dark,
 			"dropdown.background": color.surface.dark,
 			"dropdown.border": color.border.dark,
+			// Debug
+			"debugToolBar.border": color.border.dark,
+			"debugToolBar.background": color.grey.base,
+			"debugExceptionWidget.border": color.border.dark,
+			// Diff editor
+			"diffEditor.border": color.border.dark,
+			// EditorGroup
+			"editorGroupHeader.tabsBorder": color.border.dark,
+			"editorGroup.border": color.border.dark,
+			"editorGroup.focusedEmptyBorder": color.border.dark,
+			"editorGroup.dropIntoPromptBorder": color.border.dark,
+			"editorGroupHeader.tabsBackground": color.surface.dark,
+			// Editor
 			"editor.background": color.surface.darker,
-			"editor.findMatchBackground": color.surface.darker,
-			"editor.findMatchBorder": color.accent.base,
-			"editor.findMatchHighlightBackground": color.accent.base,
+			"editor.findMatchBackground": alpha(
+				color.lightBlue.base,
+				0.05
+			),
+			"editor.findMatchBorder": alpha(
+				color.lightBlue.base,
+				0.35
+			),
+			"editor.findMatchHighlightBackground": alpha(
+				color.lightBlue.base,
+				0.3
+			),
 			"editor.findMatchHighlightBorder": color.transparent,
 			"editor.foreground": color.text.normal,
-			"editor.lineHighlightBackground": color.surface.darker,
-			"editor.selectionBackground": alpha(color.accent.base, 0.15),
-			"editor.selectionHighlightBackground": color.lightBlue.base,
+			"editor.lineHighlightBackground": darken(color.surface.darker,0.08),
+			"editor.selectionBackground": alpha(color.lightBlue.base, 0.10),
+			"editor.selectionHighlightBackground": alpha(
+				color.lightBlue.base,
+				0.25
+			),
 			"editor.selectionHighlightBorder": color.transparent,
 			"editorCursor.foreground": color.accent.base,
 			"editorError.foreground": color.red.base,
-			"editorGroup.border": color.border.dark,
-			"editorGroupHeader.tabsBackground": color.surface.dark,
 			"editorHoverWidget.background": color.surface.darker,
 			"editorHoverWidget.border": color.border.dark,
 			"editorIndentGuide.activeBackground1": color.accent.base,
 			"editorIndentGuide.background1": color.border.dark,
-			"editorInfo.foreground": color.green.base,
+			"editorInfo.foreground": color.blue.base,
 			"editorLink.activeForeground": color.text.normal,
 			"editorLineNumber.foreground": color.text.muted,
 			"editorLineNumber.activeForeground": color.text.normal,
 			"editorLineNumber.dimmedForeground": color.text.disabled,
 			"editorMarkerNavigation.background": color.surface.dark,
 			"editorOverviewRuler.border": color.border.dark,
-			"editorOverviewRuler.errorForeground": color.red.base,
 			"editorOverviewRuler.findMatchForeground": color.accent.base,
-			"editorOverviewRuler.warningForeground": color.yellow.base,
-			"editorOverviewRuler.infoForeground": color.green.base,
+			"editorOverviewRuler.errorForeground": color.red.base,
+			"editorOverviewRuler.warningForeground": color.orange.base,
+			"editorOverviewRuler.infoForeground": color.blue.base,
 			"editorRuler.foreground": color.surface.dark,
 			"editorSuggestWidget.background": color.surface.dark,
 			"editorSuggestWidget.border": color.border.dark,
@@ -121,14 +140,17 @@ function getTheme({ theme, name }) {
 			"editorSuggestWidget.focusHighlightForeground": color.blue.scale[1],
 			"editorSuggestWidget.selectedBackground": color.accent.transparent,
 			"editorSuggestWidget.selectedForeground": color.text.normal,
-			"editorWarning.foreground": color.yellow.base,
+			"editorWarning.foreground": color.orange.base,
 			"editorWhitespace.foreground": color.grey.base,
 			"editorWidget.background": color.surface.dark,
 			"editorWidget.border": color.border.dark,
 			"editorWidget.resizeBorder": color.border.light,
+			// ExtensionButton
 			"extensionButton.prominentBackground": color.accent.base,
 			"extensionButton.prominentHoverBackground": color.accent.scale[1],
+			// Focus border
 			focusBorder: color.border.dark,
+			// Input
 			"input.background": color.surface.lighter,
 			"input.border": color.border.dark,
 			"input.foreground": color.text.normal,
@@ -137,8 +159,8 @@ function getTheme({ theme, name }) {
 			"inputOption.activeBorder": color.accent.base,
 			"input.border": color.border.dark,
 			"inputValidation.errorBorder": color.red.base,
-			"inputValidation.warningBorder": color.yellow.base,
-			"inputValidation.infoBorder": color.green.base,
+			"inputValidation.warningBorder": color.orange.base,
+			"inputValidation.infoBorder": color.blue.base,
 			"inlineChat.shadow": color.shadow,
 			// Keybindings
 			"keybindingLabel.border": color.border.dark,
@@ -154,7 +176,9 @@ function getTheme({ theme, name }) {
 			"list.hoverForeground": color.text.normal,
 			"list.inactiveSelectionBackground": color.surface.darkTransparent,
 			"list.inactiveSelectionForeground": color.text.normal,
-			"list.warningForeground": color.yellow.base,
+			"list.warningForeground": color.orange.base,
+			"list.infoForeground": color.blue.base,
+			"list.errorForeground": color.red.base,
 			"listFilterWidget.background": color.surface.darkTransparent,
 			"listFilterWidget.noMatchesOutline": color.surface.darkTransparent,
 			"listFilterWidget.outline": color.surface.darkTransparent,
@@ -289,11 +313,11 @@ function getTheme({ theme, name }) {
 			"tab.activeForeground": color.text.normal,
 			"tab.activeModifiedBorder": color.accent.base,
 			"tab.border": color.border.dark,
-			"tab.inactiveBackground": color.transparent,
+			"tab.inactiveBackground": color.surface.dark,
 			"tab.inactiveForeground": color.grey.base,
 			"tab.activeBorderTop": color.accent.base,
 			"tab.lastPinnedBorder": color.border.dark,
-			"tab.hoverBorder": color.accent.base,
+			"tab.hoverBorder": alpha(color.accent.base,0.3),
 			"tab.unfocusedActiveBorder": color.surface.dark,
 			"tab.unfocusedActiveBackground": color.transparent,
 			"tab.unfocusedActiveForeground": color.text.normal,
@@ -331,25 +355,25 @@ function getTheme({ theme, name }) {
 				foreground: color.cyan.base,
 			},
 			"variable.constant": {
-				foreground: color.red.base,
+				foreground: color.lightRed.base,
 			},
 			"variable.defaultLibrary": {
-				foreground: color.yellow.base,
+				foreground: color.lightYellow.base,
 			},
 			"variable:dart": {
-				foreground: color.red.base,
+				foreground: color.lightRed.base,
 			},
 			"property:dart": {
-				foreground: color.red.base,
+				foreground: color.lightRed.base,
 			},
 			"annotation:dart": {
-				foreground: color.red.base,
+				foreground: color.lightRed.base,
 			},
 			"parameter.label:dart": {
 				foreground: color.lightGrey.base,
 			},
 			macro: {
-				foreground: color.red.base,
+				foreground: color.lightRed.base,
 			},
 		},
 		tokenColors: [
@@ -370,14 +394,14 @@ function getTheme({ theme, name }) {
 				name: "haskell variable generic-type",
 				scope: "variable.other.generic-type.haskell",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightOrange.base,
 				},
 			},
 			{
 				name: "haskell storage type",
 				scope: "storage.type.haskell",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -398,14 +422,14 @@ function getTheme({ theme, name }) {
 				name: "variable.parameter.function.language.special.self.python",
 				scope: "variable.parameter.function.language.special.self.python",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "variable.parameter.function.language.special.cls.python",
 				scope: "variable.parameter.function.language.special.cls.python",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -426,7 +450,7 @@ function getTheme({ theme, name }) {
 				name: "entity.name.lifetime.rust",
 				scope: "entity.name.lifetime.rust",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -440,7 +464,7 @@ function getTheme({ theme, name }) {
 				name: "support.constant.edge",
 				scope: "support.constant.edge",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -454,14 +478,14 @@ function getTheme({ theme, name }) {
 				name: "keyword.operator",
 				scope: ["keyword.operator.word"],
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "regexp operator.quantifier",
 				scope: "keyword.operator.quantifier.regexp",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -482,7 +506,7 @@ function getTheme({ theme, name }) {
 				name: "markup diff",
 				scope: "markup.changed.diff",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -496,7 +520,7 @@ function getTheme({ theme, name }) {
 				name: "inserted.diff",
 				scope: "markup.inserted.diff",
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
@@ -538,21 +562,21 @@ function getTheme({ theme, name }) {
 				name: "math js/ts",
 				scope: "support.constant.math",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "math property js/ts",
 				scope: "support.constant.property.math",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
 				name: "js/ts variable.other.constant",
 				scope: "variable.other.constant",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -562,7 +586,7 @@ function getTheme({ theme, name }) {
 					"storage.type.object.array.java",
 				],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -590,14 +614,14 @@ function getTheme({ theme, name }) {
 				name: "java modifier.import",
 				scope: "storage.modifier.import.java,storage.type.java,storage.type.generic.java",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "java instanceof",
 				scope: "keyword.operator.instanceof.java",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -632,7 +656,7 @@ function getTheme({ theme, name }) {
 				name: "support.constant.property-value.scss",
 				scope: "support.constant.property-value.scss,support.constant.property-value.css",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -646,7 +670,7 @@ function getTheme({ theme, name }) {
 				name: "css color standard name",
 				scope: "support.constant.color.w3c-standard-color-name.css,support.constant.color.w3c-standard-color-name.scss",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -667,7 +691,7 @@ function getTheme({ theme, name }) {
 				name: "css attribute-name.id",
 				scope: "support.constant.color.w3c-standard-color-name.css",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -681,21 +705,21 @@ function getTheme({ theme, name }) {
 				name: "css attribute / pseudo class",
 				scope: "entity.other.attribute-name.pseudo-class.css,entity.other.attribute-name.pseudo-element.css",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "js/ts module",
 				scope: "support.module.node,support.type.object.module,support.module.node",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "entity.name.type.module",
 				scope: "entity.name.type.module",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -709,7 +733,7 @@ function getTheme({ theme, name }) {
 				name: "js/ts json",
 				scope: "support.constant.json",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -722,7 +746,7 @@ function getTheme({ theme, name }) {
 					"keyword.operator.expression.keyof",
 				],
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -736,7 +760,7 @@ function getTheme({ theme, name }) {
 				name: "js/ts support.variable.property.process",
 				scope: "support.variable.property.process",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -757,14 +781,14 @@ function getTheme({ theme, name }) {
 				name: "keyword.operator.sigil.rust",
 				scope: "keyword.operator.sigil.rust",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "operator",
 				scope: "keyword.operator.delete",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -792,7 +816,7 @@ function getTheme({ theme, name }) {
 				name: "C operator assignment",
 				scope: "keyword.operator.assignment.c,keyword.operator.comparison.c,keyword.operator.c,keyword.operator.increment.c,keyword.operator.decrement.c,keyword.operator.bitwise.shift.c,keyword.operator.assignment.cpp,keyword.operator.comparison.cpp,keyword.operator.cpp,keyword.operator.increment.cpp,keyword.operator.decrement.cpp,keyword.operator.bitwise.shift.cpp",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -806,7 +830,7 @@ function getTheme({ theme, name }) {
 				name: "Other punctuation .c",
 				scope: "punctuation.separator.c,punctuation.separator.cpp",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -820,14 +844,14 @@ function getTheme({ theme, name }) {
 				name: "keyword.operator.sizeof.c",
 				scope: "keyword.operator.sizeof.c,keyword.operator.sizeof.cpp",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "python parameter",
 				scope: "variable.parameter.function.language.python",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -841,14 +865,14 @@ function getTheme({ theme, name }) {
 				name: "python logical",
 				scope: "keyword.operator.logical.python",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "pyCs",
 				scope: "variable.parameter.function.python",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -869,7 +893,7 @@ function getTheme({ theme, name }) {
 				name: "python placeholder reset to normal string",
 				scope: "constant.character.format.placeholder.other.python",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -883,7 +907,7 @@ function getTheme({ theme, name }) {
 				name: "Compound Assignment Operators",
 				scope: "keyword.operator.assignment.compound",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -897,14 +921,14 @@ function getTheme({ theme, name }) {
 				name: "Keywords",
 				scope: "keyword",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "Namespaces",
 				scope: "entity.name.namespace",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -925,7 +949,7 @@ function getTheme({ theme, name }) {
 				name: "Language variables",
 				scope: "variable.language",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -939,14 +963,14 @@ function getTheme({ theme, name }) {
 				name: "Java Imports",
 				scope: "import.storage.java",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "Packages",
 				scope: "token.package.keyword",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -972,21 +996,21 @@ function getTheme({ theme, name }) {
 				name: "Classes",
 				scope: "entity.name.type.namespace",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "Classes",
 				scope: "support.class, entity.name.type.class",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "Class name",
 				scope: "entity.name.class.identifier.namespace.type",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -997,7 +1021,7 @@ function getTheme({ theme, name }) {
 					"variable.other.class.ts",
 				],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1011,21 +1035,21 @@ function getTheme({ theme, name }) {
 				name: "Type Name",
 				scope: "entity.name.type",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "Keyword Control",
 				scope: "keyword.control",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "Control Elements",
 				scope: "control.elements, keyword.operator.less",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -1039,28 +1063,28 @@ function getTheme({ theme, name }) {
 				name: "Storage",
 				scope: "storage",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "Storage JS TS",
 				scope: "token.storage",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "Source Js Keyword Operator Delete,source Js Keyword Operator In,source Js Keyword Operator Of,source Js Keyword Operator Instanceof,source Js Keyword Operator New,source Js Keyword Operator Typeof,source Js Keyword Operator Void",
 				scope: "keyword.operator.expression.delete,keyword.operator.expression.in,keyword.operator.expression.of,keyword.operator.expression.instanceof,keyword.operator.new,keyword.operator.expression.typeof,keyword.operator.expression.void",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "Java Storage",
 				scope: "token.storage.type.java",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1088,7 +1112,7 @@ function getTheme({ theme, name }) {
 				name: "Support type",
 				scope: "support.constant.font-name",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -1102,7 +1126,7 @@ function getTheme({ theme, name }) {
 				name: "Strings",
 				scope: "string",
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
@@ -1116,21 +1140,21 @@ function getTheme({ theme, name }) {
 				name: "Integers",
 				scope: "constant.numeric",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
 				name: "Constants",
 				scope: "constant",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
 				name: "Constants",
 				scope: "punctuation.definition.constant",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -1144,7 +1168,7 @@ function getTheme({ theme, name }) {
 				name: "Attributes",
 				scope: "entity.other.attribute-name",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -1160,7 +1184,7 @@ function getTheme({ theme, name }) {
 				scope: "entity.other.attribute-name.class.css",
 				settings: {
 					fontStyle: "",
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -1190,14 +1214,14 @@ function getTheme({ theme, name }) {
 				name: "Units",
 				scope: "keyword.other.unit",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
 				name: "Bold",
 				scope: "markup.bold,todo.bold",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 					fontStyle: "bold",
 				},
 			},
@@ -1205,7 +1229,7 @@ function getTheme({ theme, name }) {
 				name: "Bold",
 				scope: "punctuation.definition.bold",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 					fontStyle: "bold",
 				},
 			},
@@ -1213,7 +1237,7 @@ function getTheme({ theme, name }) {
 				name: "markup Italic",
 				scope: "markup.italic, punctuation.definition.italic,todo.emphasis",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 					fontStyle: "italic",
 				},
 			},
@@ -1221,7 +1245,7 @@ function getTheme({ theme, name }) {
 				name: "emphasis md",
 				scope: "emphasis md",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 					fontStyle: "italic",
 				},
 			},
@@ -1261,7 +1285,7 @@ function getTheme({ theme, name }) {
 				name: "[VSCODE-CUSTOM] Markdown Punctuation Definition Bold",
 				scope: "punctuation.definition.bold.markdown",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 					fontStyle: "bold",
 				},
 			},
@@ -1269,21 +1293,21 @@ function getTheme({ theme, name }) {
 				name: "[VSCODE-CUSTOM] Markdown Inline Raw",
 				scope: "markup.inline.raw.markdown",
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
 				name: "[VSCODE-CUSTOM] Markdown Inline Raw",
 				scope: "markup.inline.raw.string.markdown",
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
 				name: "[VSCODE-CUSTOM] Markdown Inline Raw punctuation",
 				scope: "punctuation.definition.raw.markdown",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1323,7 +1347,7 @@ function getTheme({ theme, name }) {
 				name: "[VSCODE-CUSTOM] Markdown Underline Link/Image",
 				scope: "markup.underline.link.markdown,markup.underline.link.image.markdown",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -1337,28 +1361,28 @@ function getTheme({ theme, name }) {
 				name: "[VSCODE-CUSTOM] Asciidoc Inline Raw",
 				scope: "markup.raw.monospace.asciidoc",
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
 				name: "[VSCODE-CUSTOM] Asciidoc Inline Raw Punctuation Definition",
 				scope: "punctuation.definition.asciidoc",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "[VSCODE-CUSTOM] Asciidoc List Punctuation Definition",
 				scope: "markup.list.asciidoc",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "[VSCODE-CUSTOM] Asciidoc underline link",
 				scope: "markup.link.asciidoc,markup.other.url.asciidoc",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -1386,7 +1410,7 @@ function getTheme({ theme, name }) {
 				name: "Embedded",
 				scope: "punctuation.section.embedded.begin,punctuation.section.embedded.end",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -1427,7 +1451,7 @@ function getTheme({ theme, name }) {
 				name: "html Deprecated",
 				scope: "invalid.deprecated.entity.other.attribute-name.html",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -1455,7 +1479,7 @@ function getTheme({ theme, name }) {
 				name: "Source Json Meta Structure Dictionary Json > Value Json > String Quoted Json,source Json Meta Structure Array Json > Value Json > String Quoted Json,source Json Meta Structure Dictionary Json > Value Json > String Quoted Json > Punctuation,source Json Meta Structure Array Json > Value Json > String Quoted Json > Punctuation",
 				scope: "source.json meta.structure.dictionary.json > value.json > string.quoted.json,source.json meta.structure.array.json > value.json > string.quoted.json,source.json meta.structure.dictionary.json > value.json > string.quoted.json > punctuation,source.json meta.structure.array.json > value.json > string.quoted.json > punctuation",
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
@@ -1483,35 +1507,35 @@ function getTheme({ theme, name }) {
 				name: "laravel blade tag",
 				scope: "text.html.laravel-blade source.php.embedded.line.html entity.name.tag.laravel-blade",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "laravel blade @",
 				scope: "text.html.laravel-blade source.php.embedded.line.html support.constant.laravel-blade",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "use statement for other classes",
 				scope: "support.other.namespace.use.php,support.other.namespace.use-as.php,entity.other.alias.php,meta.interface.php",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "error suppression",
 				scope: "keyword.operator.error-control.php",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "php instanceof",
 				scope: "keyword.operator.type.php",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -1532,14 +1556,14 @@ function getTheme({ theme, name }) {
 				name: "php illegal.non-null-typehinted",
 				scope: "invalid.illegal.non-null-typehinted.php",
 				settings: {
-					foreground: "#f44747",
+					foreground: color.red.base,
 				},
 			},
 			{
 				name: "php types",
 				scope: "storage.type.php,meta.other.type.phpdoc.php,keyword.other.type.php,keyword.other.array.phpdoc.php",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1560,14 +1584,14 @@ function getTheme({ theme, name }) {
 				name: "support php constants",
 				scope: "support.constant.core.rust",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
 				name: "support php constants",
 				scope: "support.constant.ext.php,support.constant.std.php,support.constant.core.php,support.constant.parser-token.php",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -1588,7 +1612,7 @@ function getTheme({ theme, name }) {
 				name: "php regexp operator",
 				scope: "keyword.operator.regexp.php",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -1599,10 +1623,10 @@ function getTheme({ theme, name }) {
 				},
 			},
 			{
-				name: "php heredoc/nowdoc",
-				scope: "keyword.operator.heredoc.php,keyword.operator.nowdoc.php",
+				name: "php helightRedoc/nowdoc",
+				scope: "keyword.operator.helightRedoc.php,keyword.operator.nowdoc.php",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -1658,14 +1682,14 @@ function getTheme({ theme, name }) {
 				name: "rgb value",
 				scope: "inline-color-decoration rgb-value",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
 				name: "rgb value less",
 				scope: "less rgb-value",
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -1679,7 +1703,7 @@ function getTheme({ theme, name }) {
 				name: "ts primitive/builtin types",
 				scope: "support.type.primitive.ts,support.type.builtin.ts,support.type.primitive.tsx,support.type.builtin.tsx",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1693,7 +1717,7 @@ function getTheme({ theme, name }) {
 				name: "cs storage type",
 				scope: "storage.type.cs",
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1724,7 +1748,7 @@ function getTheme({ theme, name }) {
 			{
 				scope: "token.debug-token",
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -1735,7 +1759,7 @@ function getTheme({ theme, name }) {
 					"punctuation.section.embedded",
 				],
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -1749,7 +1773,7 @@ function getTheme({ theme, name }) {
 				name: "Import module JS",
 				scope: ["keyword.operator.module"],
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -1763,7 +1787,7 @@ function getTheme({ theme, name }) {
 				name: "js Flow",
 				scope: ["support.type.primitive"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1784,28 +1808,28 @@ function getTheme({ theme, name }) {
 				name: "js template literals begin",
 				scope: ["keyword.other.template.begin"],
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
 				name: "js template literals end",
 				scope: ["keyword.other.template.end"],
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
 				name: "js template literals variable braces begin",
 				scope: ["keyword.other.substitution.begin"],
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
 				name: "js template literals variable braces end",
 				scope: ["keyword.other.substitution.end"],
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
@@ -1819,7 +1843,7 @@ function getTheme({ theme, name }) {
 				name: "go operator",
 				scope: ["keyword.operator.assignment.go"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1829,14 +1853,14 @@ function getTheme({ theme, name }) {
 					"keyword.operator.address.go",
 				],
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				name: "Go package name",
 				scope: ["entity.name.package.go"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1850,14 +1874,14 @@ function getTheme({ theme, name }) {
 				name: "elm constant",
 				scope: ["support.constant.elm"],
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
 				name: "template literal",
 				scope: ["punctuation.quasi.element"],
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -1881,7 +1905,7 @@ function getTheme({ theme, name }) {
 				name: "Clojure globals",
 				scope: ["entity.global.clojure"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1912,7 +1936,7 @@ function getTheme({ theme, name }) {
 				name: "Ini Default Text",
 				scope: ["source.ini"],
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
@@ -1926,14 +1950,14 @@ function getTheme({ theme, name }) {
 				name: "Makefile text colour",
 				scope: ["source.makefile"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "Groovy import names",
 				scope: ["storage.modifier.import.groovy"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1954,14 +1978,14 @@ function getTheme({ theme, name }) {
 				name: "Groovy Inheritance",
 				scope: ["meta.definition.class.inherited.classes.groovy"],
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
 				name: "HLSL Semantic",
 				scope: ["support.variable.semantic.hlsl"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -1975,7 +1999,7 @@ function getTheme({ theme, name }) {
 					"support.type.object.hlsl",
 				],
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -1989,14 +2013,14 @@ function getTheme({ theme, name }) {
 				name: "types",
 				scope: ["support.type.swift", "support.type.vb.asp"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
 				name: "heading 1, keyword",
 				scope: ["entity.name.function.xi"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -2017,7 +2041,7 @@ function getTheme({ theme, name }) {
 				name: "heading 4, type, class, interface",
 				scope: ["constant.regexp.xi"],
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
@@ -2038,14 +2062,14 @@ function getTheme({ theme, name }) {
 				name: "string",
 				scope: ["beginning.punctuation.definition.quote.markdown.xi"],
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
 				name: "comments",
 				scope: ["beginning.punctuation.definition.list.markdown.xi"],
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
@@ -2066,7 +2090,7 @@ function getTheme({ theme, name }) {
 				name: "wikiword",
 				scope: ["wikiword.xi"],
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
@@ -2091,7 +2115,7 @@ function getTheme({ theme, name }) {
 					"entity.name.scope-resolution.function.definition",
 				],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -2145,7 +2169,7 @@ function getTheme({ theme, name }) {
 			{
 				scope: ["entity.name.variable.parameter.cs"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -2165,7 +2189,7 @@ function getTheme({ theme, name }) {
 				name: "Inserted",
 				scope: "markup.inserted",
 				settings: {
-					foreground: color.green.base,
+					foreground: color.lightGreen.base,
 				},
 			},
 			{
@@ -2196,7 +2220,7 @@ function getTheme({ theme, name }) {
 				name: "variable.other.object",
 				scope: ["variable.other.object"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -2210,7 +2234,7 @@ function getTheme({ theme, name }) {
 				name: "entity.other.inherited-class",
 				scope: ["entity.other.inherited-class"],
 				settings: {
-					foreground: color.yellow.base,
+					foreground: color.lightYellow.base,
 				},
 			},
 			{
@@ -2231,19 +2255,19 @@ function getTheme({ theme, name }) {
 				name: "Assembly",
 				scope: ["constant.numeric.decimal.asm.x86_64"],
 				settings: {
-					foreground: color.magenta.base,
+					foreground: color.lightMagenta.base,
 				},
 			},
 			{
 				scope: ["support.other.parenthesis.regexp"],
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{
 				scope: ["constant.character.escape"],
 				settings: {
-					foreground: color.red.base,
+					foreground: color.lightRed.base,
 				},
 			},
 			{

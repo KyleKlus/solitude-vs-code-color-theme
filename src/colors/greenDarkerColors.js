@@ -1,4 +1,5 @@
 const chroma = require("chroma-js");
+const baseColors = require("./baseColors");
 
 const alpha = (color, alpha) => {
 	return chroma(color).alpha(alpha).hex();
@@ -13,21 +14,27 @@ const lighten = (color, amount) => {
 };
 
 const darkerBaseColors = {
-	white: "#cdd1d6",
+	white: baseColors.white,
 	black: "hsl(180, 5%, 9%)",
-	grey: "#6e7781",
-	lightGrey:"#abb2bf",
-	accentRed: "hsl(101, 58%, 57%)",
-	red: "#e15965",
-	green: "#49B649",
-	darkGreen:"#578352",
-	orange: "#e69040",
-	yellow: "#e9dd54",
-	blue: "#43A4F4",
-	lightBlue: "#5ed1e0",
-	magenta: "#CF82E8",
-	cyan: "#37beac",
-	transparent: "#ffffff00",
+	accentGreen: baseColors.accentGreen,
+	grey: baseColors.grey,
+	lightGrey: baseColors.lightGrey,
+	red: baseColors.red,
+	lightRed: baseColors.lightRed,
+	green: baseColors.green,
+	lightGreen: baseColors.lightGreen,
+	darkGreen: baseColors.darkGreen,
+	orange: baseColors.orange,
+	lightOrange: baseColors.lightOrange,
+	yellow: baseColors.yellow,
+	lightYellow: baseColors.lightYellow,
+	blue: baseColors.blue,
+	lightBlue: baseColors.lightBlue,
+	magenta: baseColors.magenta,
+	lightMagenta: baseColors.lightMagenta,
+	cyan: baseColors.cyan,
+	lightCyan: baseColors.lightCyan,
+	transparent: this.transparent,
 };
 
 const darkerBaseScaleColors = {
@@ -85,6 +92,17 @@ const darkerBaseScaleColors = {
 			chroma(darkerBaseColors.lightGrey).brighten(0.4).hex(),
 		],
 	},
+	accentGreen: {
+		base: darkerBaseColors.accentGreen,
+		transparent: chroma(darkerBaseColors.accentGreen).alpha(0.6).hex(),
+		dark: alpha(darken(darkerBaseColors.accentGreen, 0.8), 0.6),
+		scale: [
+			chroma(darkerBaseColors.accentGreen).brighten(0.1).hex(),
+			chroma(darkerBaseColors.accentGreen).brighten(0.2).hex(),
+			chroma(darkerBaseColors.accentGreen).brighten(0.3).hex(),
+			chroma(darkerBaseColors.accentGreen).brighten(0.4).hex(),
+		],
+	},
 	red: {
 		base: darkerBaseColors.red,
 		scale: [
@@ -94,15 +112,13 @@ const darkerBaseScaleColors = {
 			chroma(darkerBaseColors.red).brighten(0.4).hex(),
 		],
 	},
-	accentRed: {
-		base: darkerBaseColors.accentRed,
-		transparent: chroma(darkerBaseColors.accentRed).alpha(0.6).hex(),
-		dark: alpha(darken(darkerBaseColors.accentRed, 0.8), 0.6),
+	lightRed: {
+		base: darkerBaseColors.lightRed,
 		scale: [
-			chroma(darkerBaseColors.accentRed).brighten(0.1).hex(),
-			chroma(darkerBaseColors.accentRed).brighten(0.2).hex(),
-			chroma(darkerBaseColors.accentRed).brighten(0.3).hex(),
-			chroma(darkerBaseColors.accentRed).brighten(0.4).hex(),
+			chroma(darkerBaseColors.lightRed).brighten(0.1).hex(),
+			chroma(darkerBaseColors.lightRed).brighten(0.2).hex(),
+			chroma(darkerBaseColors.lightRed).brighten(0.3).hex(),
+			chroma(darkerBaseColors.lightRed).brighten(0.4).hex(),
 		],
 	},
 	blue: {
@@ -132,6 +148,15 @@ const darkerBaseScaleColors = {
 			chroma(darkerBaseColors.green).brighten(0.4).hex(),
 		],
 	},
+	lightGreen: {
+		base: darkerBaseColors.lightGreen,
+		scale: [
+			chroma(darkerBaseColors.lightGreen).brighten(0.1).hex(),
+			chroma(darkerBaseColors.lightGreen).brighten(0.2).hex(),
+			chroma(darkerBaseColors.lightGreen).brighten(0.3).hex(),
+			chroma(darkerBaseColors.lightGreen).brighten(0.4).hex(),
+		],
+	},
 	darkGreen: {
 		base: darkerBaseColors.darkGreen,
 		scale: [
@@ -150,6 +175,15 @@ const darkerBaseScaleColors = {
 			chroma(darkerBaseColors.yellow).brighten(0.4).hex(),
 		],
 	},
+	lightYellow: {
+		base: darkerBaseColors.lightYellow,
+		scale: [
+			chroma(darkerBaseColors.lightYellow).brighten(0.1).hex(),
+			chroma(darkerBaseColors.lightYellow).brighten(0.2).hex(),
+			chroma(darkerBaseColors.lightYellow).brighten(0.3).hex(),
+			chroma(darkerBaseColors.lightYellow).brighten(0.4).hex(),
+		],
+	},
 	orange: {
 		base: darkerBaseColors.orange,
 		scale: [
@@ -157,6 +191,15 @@ const darkerBaseScaleColors = {
 			chroma(darkerBaseColors.orange).brighten(0.2).hex(),
 			chroma(darkerBaseColors.orange).brighten(0.3).hex(),
 			chroma(darkerBaseColors.orange).brighten(0.4).hex(),
+		],
+	},
+	lightOrange: {
+		base: darkerBaseColors.lightOrange,
+		scale: [
+			chroma(darkerBaseColors.lightOrange).brighten(0.1).hex(),
+			chroma(darkerBaseColors.lightOrange).brighten(0.2).hex(),
+			chroma(darkerBaseColors.lightOrange).brighten(0.3).hex(),
+			chroma(darkerBaseColors.lightOrange).brighten(0.4).hex(),
 		],
 	},
 	magenta: {
@@ -168,6 +211,15 @@ const darkerBaseScaleColors = {
 			chroma(darkerBaseColors.magenta).brighten(0.4).hex(),
 		],
 	},
+	lightMagenta: {
+		base: darkerBaseColors.lightMagenta,
+		scale: [
+			chroma(darkerBaseColors.lightMagenta).brighten(0.1).hex(),
+			chroma(darkerBaseColors.lightMagenta).brighten(0.2).hex(),
+			chroma(darkerBaseColors.lightMagenta).brighten(0.3).hex(),
+			chroma(darkerBaseColors.lightMagenta).brighten(0.4).hex(),
+		],
+	},
 	cyan: {
 		base: darkerBaseColors.cyan,
 		scale: [
@@ -177,10 +229,19 @@ const darkerBaseScaleColors = {
 			chroma(darkerBaseColors.cyan).brighten(0.4).hex(),
 		],
 	},
+	lightCyan: {
+		base: darkerBaseColors.lightCyan,
+		scale: [
+			chroma(darkerBaseColors.lightCyan).brighten(0.1).hex(),
+			chroma(darkerBaseColors.lightCyan).brighten(0.2).hex(),
+			chroma(darkerBaseColors.lightCyan).brighten(0.3).hex(),
+			chroma(darkerBaseColors.lightCyan).brighten(0.4).hex(),
+		],
+	},
 };
 
 const darkerColors = {
-	accent: darkerBaseScaleColors.accentRed,
+	accent: darkerBaseScaleColors.accentGreen,
 	border: {
 		light: darkerBaseScaleColors.black.scale[6],
 		dark: darkerBaseScaleColors.black.base,
@@ -207,17 +268,21 @@ const darkerColors = {
 	grey: darkerBaseScaleColors.grey,
 	lightGrey: darkerBaseScaleColors.lightGrey,
 	red: darkerBaseScaleColors.red,
-	magenta: darkerBaseScaleColors.magenta,
+	lightRed: darkerBaseScaleColors.lightRed,
+	green: darkerBaseScaleColors.green,
+	lightGreen: darkerBaseScaleColors.lightGreen,
+	darkGreen: darkerBaseScaleColors.darkGreen,
+	orange: darkerBaseScaleColors.orange,
+	lightOrange: darkerBaseScaleColors.lightOrange,
+	yellow: darkerBaseScaleColors.yellow,
+	lightYellow: darkerBaseScaleColors.lightYellow,
 	blue: darkerBaseScaleColors.blue,
 	lightBlue: darkerBaseScaleColors.lightBlue,
+	magenta: darkerBaseScaleColors.magenta,
+	lightMagenta: darkerBaseScaleColors.lightMagenta,
 	cyan: darkerBaseScaleColors.cyan,
-	darkGreen: darkerBaseScaleColors.darkGreen,
-	green: darkerBaseScaleColors.green,
-	yellow: darkerBaseScaleColors.yellow,
-	orange: darkerBaseScaleColors.orange,
+	lightCyan: darkerBaseScaleColors.lightCyan,
 	transparent: darkerBaseColors.transparent,
 };
-
-
 
 module.exports = darkerColors;

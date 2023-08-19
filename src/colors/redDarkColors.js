@@ -1,4 +1,5 @@
 const chroma = require("chroma-js");
+const baseColors = require("./baseColors");
 
 const alpha = (color, alpha) => {
 	return chroma(color).alpha(alpha).hex();
@@ -13,21 +14,27 @@ const lighten = (color, amount) => {
 };
 
 const darkBaseColors = {
-	white: "#cdd1d6",
+	white: baseColors.white,
 	black: "hsl(180, 5%, 13%)",
-	grey: "#6e7781",
-	lightGrey:"#abb2bf",
-	accentRed: "#d15252",
-	red: "#e15965",
-	green: "#49B649",
-	darkGreen:"#578352",
-	orange: "#e69040",
-	yellow: "#e9dd54",
-	blue: "#43A4F4",
-	lightBlue: "#5ed1e0",
-	magenta: "#CF82E8",
-	cyan: "#37beac",
-	transparent: "#ffffff00",
+	grey: baseColors.grey,
+	lightGrey: baseColors.lightGrey,
+	accentRed: baseColors.accentRed,
+	red: baseColors.red,
+	lightRed: baseColors.lightRed,
+	green: baseColors.green,
+	lightGreen: baseColors.lightGreen,
+	darkGreen: baseColors.darkGreen,
+	orange: baseColors.orange,
+	lightOrange: baseColors.lightOrange,
+	yellow: baseColors.yellow,
+	lightYellow: baseColors.lightYellow,
+	blue: baseColors.blue,
+	lightBlue: baseColors.lightBlue,
+	magenta: baseColors.magenta,
+	lightMagenta: baseColors.lightMagenta,
+	cyan: baseColors.cyan,
+	lightCyan: baseColors.lightCyan,
+	transparent: this.transparent,
 };
 
 const darkBaseScaleColors = {
@@ -85,15 +92,6 @@ const darkBaseScaleColors = {
 			chroma(darkBaseColors.lightGrey).brighten(0.4).hex(),
 		],
 	},
-	red: {
-		base: darkBaseColors.red,
-		scale: [
-			chroma(darkBaseColors.red).brighten(0.1).hex(),
-			chroma(darkBaseColors.red).brighten(0.2).hex(),
-			chroma(darkBaseColors.red).brighten(0.3).hex(),
-			chroma(darkBaseColors.red).brighten(0.4).hex(),
-		],
-	},
 	accentRed: {
 		base: darkBaseColors.accentRed,
 		transparent: chroma(darkBaseColors.accentRed).alpha(0.6).hex(),
@@ -103,6 +101,24 @@ const darkBaseScaleColors = {
 			chroma(darkBaseColors.accentRed).brighten(0.2).hex(),
 			chroma(darkBaseColors.accentRed).brighten(0.3).hex(),
 			chroma(darkBaseColors.accentRed).brighten(0.4).hex(),
+		],
+	},
+	red: {
+		base: darkBaseColors.red,
+		scale: [
+			chroma(darkBaseColors.red).brighten(0.1).hex(),
+			chroma(darkBaseColors.red).brighten(0.2).hex(),
+			chroma(darkBaseColors.red).brighten(0.3).hex(),
+			chroma(darkBaseColors.red).brighten(0.4).hex(),
+		],
+	},
+	lightRed: {
+		base: darkBaseColors.lightRed,
+		scale: [
+			chroma(darkBaseColors.lightRed).brighten(0.1).hex(),
+			chroma(darkBaseColors.lightRed).brighten(0.2).hex(),
+			chroma(darkBaseColors.lightRed).brighten(0.3).hex(),
+			chroma(darkBaseColors.lightRed).brighten(0.4).hex(),
 		],
 	},
 	blue: {
@@ -132,6 +148,15 @@ const darkBaseScaleColors = {
 			chroma(darkBaseColors.green).brighten(0.4).hex(),
 		],
 	},
+	lightGreen: {
+		base: darkBaseColors.lightGreen,
+		scale: [
+			chroma(darkBaseColors.lightGreen).brighten(0.1).hex(),
+			chroma(darkBaseColors.lightGreen).brighten(0.2).hex(),
+			chroma(darkBaseColors.lightGreen).brighten(0.3).hex(),
+			chroma(darkBaseColors.lightGreen).brighten(0.4).hex(),
+		],
+	},
 	darkGreen: {
 		base: darkBaseColors.darkGreen,
 		scale: [
@@ -150,6 +175,15 @@ const darkBaseScaleColors = {
 			chroma(darkBaseColors.yellow).brighten(0.4).hex(),
 		],
 	},
+	lightYellow: {
+		base: darkBaseColors.lightYellow,
+		scale: [
+			chroma(darkBaseColors.lightYellow).brighten(0.1).hex(),
+			chroma(darkBaseColors.lightYellow).brighten(0.2).hex(),
+			chroma(darkBaseColors.lightYellow).brighten(0.3).hex(),
+			chroma(darkBaseColors.lightYellow).brighten(0.4).hex(),
+		],
+	},
 	orange: {
 		base: darkBaseColors.orange,
 		scale: [
@@ -157,6 +191,15 @@ const darkBaseScaleColors = {
 			chroma(darkBaseColors.orange).brighten(0.2).hex(),
 			chroma(darkBaseColors.orange).brighten(0.3).hex(),
 			chroma(darkBaseColors.orange).brighten(0.4).hex(),
+		],
+	},
+	lightOrange: {
+		base: darkBaseColors.lightOrange,
+		scale: [
+			chroma(darkBaseColors.lightOrange).brighten(0.1).hex(),
+			chroma(darkBaseColors.lightOrange).brighten(0.2).hex(),
+			chroma(darkBaseColors.lightOrange).brighten(0.3).hex(),
+			chroma(darkBaseColors.lightOrange).brighten(0.4).hex(),
 		],
 	},
 	magenta: {
@@ -168,6 +211,15 @@ const darkBaseScaleColors = {
 			chroma(darkBaseColors.magenta).brighten(0.4).hex(),
 		],
 	},
+	lightMagenta: {
+		base: darkBaseColors.lightMagenta,
+		scale: [
+			chroma(darkBaseColors.lightMagenta).brighten(0.1).hex(),
+			chroma(darkBaseColors.lightMagenta).brighten(0.2).hex(),
+			chroma(darkBaseColors.lightMagenta).brighten(0.3).hex(),
+			chroma(darkBaseColors.lightMagenta).brighten(0.4).hex(),
+		],
+	},
 	cyan: {
 		base: darkBaseColors.cyan,
 		scale: [
@@ -175,6 +227,15 @@ const darkBaseScaleColors = {
 			chroma(darkBaseColors.cyan).brighten(0.2).hex(),
 			chroma(darkBaseColors.cyan).brighten(0.3).hex(),
 			chroma(darkBaseColors.cyan).brighten(0.4).hex(),
+		],
+	},
+	lightCyan: {
+		base: darkBaseColors.lightCyan,
+		scale: [
+			chroma(darkBaseColors.lightCyan).brighten(0.1).hex(),
+			chroma(darkBaseColors.lightCyan).brighten(0.2).hex(),
+			chroma(darkBaseColors.lightCyan).brighten(0.3).hex(),
+			chroma(darkBaseColors.lightCyan).brighten(0.4).hex(),
 		],
 	},
 };
@@ -207,17 +268,21 @@ const darkColors = {
 	grey: darkBaseScaleColors.grey,
 	lightGrey: darkBaseScaleColors.lightGrey,
 	red: darkBaseScaleColors.red,
-	magenta: darkBaseScaleColors.magenta,
+	lightRed: darkBaseScaleColors.lightRed,
+	green: darkBaseScaleColors.green,
+	lightGreen: darkBaseScaleColors.lightGreen,
+	darkGreen: darkBaseScaleColors.darkGreen,
+	orange: darkBaseScaleColors.orange,
+	lightOrange: darkBaseScaleColors.lightOrange,
+	yellow: darkBaseScaleColors.yellow,
+	lightYellow: darkBaseScaleColors.lightYellow,
 	blue: darkBaseScaleColors.blue,
 	lightBlue: darkBaseScaleColors.lightBlue,
+	magenta: darkBaseScaleColors.magenta,
+	lightMagenta: darkBaseScaleColors.lightMagenta,
 	cyan: darkBaseScaleColors.cyan,
-	darkGreen: darkBaseScaleColors.darkGreen,
-	green: darkBaseScaleColors.green,
-	yellow: darkBaseScaleColors.yellow,
-	orange: darkBaseScaleColors.orange,
+	lightCyan: darkBaseScaleColors.lightCyan,
 	transparent: darkBaseColors.transparent,
 };
-
-
 
 module.exports = darkColors;

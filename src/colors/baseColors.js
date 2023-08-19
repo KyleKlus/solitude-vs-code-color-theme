@@ -1,0 +1,27 @@
+const baseColors = {
+	white: "#cdd1d6",
+	black: "hsl(180, 5%, 9%)",
+	grey: "#6e7781",
+	lightGrey: "#abb2bf",
+	accentRed: "#d15252",
+	accentBlue: "#528dd1",
+	accentGreen: "#7ad152",
+	red: "#e02c3b",
+	lightRed: "#da5762",
+	green: "#2db62d",
+	lightGreen: "#56b856",
+	darkGreen: "#4b6d48",
+	orange: "#e69040",
+	lightOrange: "#e7a568",
+	yellow: "#e7d832",
+	lightYellow: "#e9dd54",
+	blue: "#43A4F4",
+	lightBlue: "#5ed1e0",
+	magenta: "#c35ae6",
+	lightMagenta: "#CF82E8",
+	cyan: "#37beac",
+	lightCyan: "#62c9bb",
+	transparent: "#ffffff00",
+};
+
+module.exports = baseColors;
