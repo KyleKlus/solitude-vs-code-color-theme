@@ -1,7 +1,7 @@
 {
-  "name": "solitude",
+  "name": "solitude-theme",
   "displayName": "Solitude",
-  "description": "“Solitude” is a custom dark theme for Visual Studio Code that features 3 accent colors (red, green, blue) and 2 different brightness levels to choose from.The theme is designed to be very organized and easy to navigate with borders separating each surface. The accent colors are used throughout the theme to highlight important elements and make them stand out. Overall, “Solitude” is a great choice for anyone looking for a clean and organized dark theme for Visual Studio Code.",
+  "description": "“Solitude is a custom dark theme for Visual Studio Code that features 3 accent colors (red, green, blue) and 2 different brightness levels to choose from.The theme is designed to be very organized and easy to navigate with borders separating each surface. The accent colors are used throughout the theme to highlight important elements and make them stand out. Overall, Solitude is a great choice for anyone looking for a clean and organized dark theme for Visual Studio Code.",
   "version": "0.0.1",
   "publisher": "MajorEnkidu",
   "author": "Kyle Klus",
@@ -41,7 +41,7 @@
   ,"scripts": {
     "start": "nodemon --watch src src/index.js",
     "build": "node src/index.js && mkdir -p build",
-    "package": "vsce package -o ./build/github-vscode-theme.vsix",
+    "package": "vsce package -o ./build/solitude-vs-code-color-theme.vsix",
     "prepublishOnly": "npm run build && vsce publish",
     "release": "changeset publish"
   },
